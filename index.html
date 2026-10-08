@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Household Confirm</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main>
+    <p class="eyebrow">A personal project by bartek3pl</p>
+    <h1>Household Confirm</h1>
+    <p>Household Confirm is a private automation that reads recent Netflix household update requests in the owner's Gmail account and attempts to confirm the latest request using the owner's existing Netflix browser session.</p>
+    <h2>Why Gmail access is needed</h2>
+    <p>The application uses the Gmail API with the <code>gmail.readonly</code> permission to find the request email and read its confirmation link. This permission grants read access to the mailbox. The program searches recent messages from the configured Netflix sender, verifies the exact request subject, and reads the latest matching message.</p>
+    <p>It cannot send, delete, or modify Gmail messages. There is no public signup. The owner operates the application for personal use.</p>
+    <h2>How the automation runs</h2>
+    <p>The program runs in the owner's AWS account. It stores the Gmail authorization in AWS Secrets Manager, browser session data in a private S3 bucket, and processing status in DynamoDB. It sends error notifications to the owner's configured email address.</p>
+    <p>This is an unofficial personal project. It is not affiliated with Netflix or Google, and its operation depends on those services.</p>
+    <nav aria-label="Project information">
+      <a href="privacy.html">Privacy policy</a>
+      <a href="terms.html">Terms of use</a>
+      <a href="https://github.com/bartek3pl/household-confirm-info/issues">Contact the owner</a>
+    </nav>
+  </main>
+</body>
+</html>
